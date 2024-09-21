@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    line-height: 2;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    /*Notes*/
+}
+
+/*Header*/
+
+header{
+    background-color: rgb(152, 181, 207);
+}
+header p{
+    padding: 10px;
+}
+header img{
+    width: 200px;
+    transform: rotate(-2.5deg);
+}
+.header-container{
+    max-width: 70%;
+    margin: 0 auto;
+}
+.header-bar{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.header-bar h1{
+    margin-bottom: 10px;
+}
+.header-bar a{
+    margin: 8px;
+    color: black;
+}
+.header-bar a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.header-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.header-words{
+    width: 85%;
+    font-size: large;
+}
+.puppy-link{
+    text-align: center;
+    margin-top: -80px;
+    margin-right: -10%;
+}
+.appointment{
+    margin-top: -40px;
+    background-image: url(../img/whiteboard.png);
+    height: 150px;
+    width: 300px;
+    font-family: cursive;
+    background-position: 50% 47%;
+    background-size: 125% 190%;
+    text-align: center;
+    font-size: larger;
+    align-content: center;
+}
+.appointment:hover{
+    font-size: 20px;
+    text-decoration: underline;
+}
+.attribution{
+    margin-left: 90%;
+    font-size: 8px;
+}
+/*Main*/
+.blue-edges{
+    background-color: rgb(16, 34, 49);
+}
+.main-container{
+    background-color: rgb(90, 90, 90);
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-container h2{
+    padding-top: 20px;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-articles{
+    background-color: rgb(152, 181, 207);
+    border: 2px solid rgb(0, 134, 211);
+    border-radius: 20px;
+    text-align: center;
+    margin: 5% auto;
+    padding: 5%;
+    max-width: 70%;
+}
+.about-articles h3{
+    margin-bottom: 20px;
+}
+/*Footer*/
+.footer{
+    min-height: 150px;
+    background-color: rgb(152, 181, 207);
+}
+.footer-container{
+    padding-top: 30px;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.contact{
+    width: 20%;
+}
+.established{
+    width: 20%;
+}
+.follow{
+    text-align: right;
+    width: 20%;
+}
+.icons i{
+    margin: 10px 0 0 10px;
+
+}

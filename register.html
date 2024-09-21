@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/register.css">
+    <script src="https://kit.fontawesome.com/30aa77e7d0.js" crossorigin="anonymous"></script>
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <h1>Pet Salon</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="services.html">Services</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+        </div>
+        <div class="registered-main">
+            <p class="number-registered" id="numberRegistered"></p>
+        </div>
+    </header>
+    <main class="blue-edges">
+        <div class="main-container">
+            <h2>Register Your Pet</h2>
+            <form id="registerForm" class="register-field">
+                <legend>Pet information</legend>
+                <div class="sub-form">
+                    <div class="form-control">
+                        <label for="txtName">* Name:</label>
+                        <input type="text" name="name" id="txtName">
+                    </div>    
+                    <div class="form-control">
+                        <label for="txtAge">* Age:</label>
+                        <input type="number" name="age" id="txtAge">
+                    </div>
+                    <div class="form-control">
+                        <label for="txtBreed">* Breed:</label>
+                        <input type="text" name="breed" id="txtBreed">
+                    </div>
+                    <div class="form-control">
+                        <label for="txtService">* Service:</label>
+                        <select name="service" id="txtService">
+                            <option value="">---Please select an option---</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="txtType">* Type:</label>
+                        <select name="type" id="txtType">
+                            <option value="">---Please select an option---</option>
+                            <option value="cat">Cat</option>
+                            <option value="dog">Dog</option>
+                            <option value="bird">Bird</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-radio">
+                        <legend>* Gender:</legend>
+                        <div class="form-radio-sub">
+                            <div>
+                                <input name="gender" id="male" value="male" type="radio">
+                                <label for="male">Male</label>
+                            </div>
+                            <div>
+                                <input name="gender" id="female" value="female" type="radio">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-img">
+                        <label for="imgPhoto">Add a photo:</label>
+                        <input name="photo" id="imgPhoto" type="file" accept="image/jpg">
+                    </div>
+                </div>
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <h2>Currently Registered:</h2>
+            <div id="petBoxes" class="pets-grid"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact">
+                <h4>Contact Us:</h4>
+                <p>(999)-999-9999</p>
+                <p>customerservice@petsalon.com</p>
+            </div>
+            <div class="established">
+                <h3>Pet Salon | Est. 2024</h3>
+            </div>
+            <div class="follow">
+                <h4>Follow us!</h4>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>   
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>  
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./plugins/jquery.js"></script>
+    <script type="module" src="./scripts/register.js"></script>
+    <script type="module" src="./scripts/admin.js"></script>
+    <script src="./scripts/services.js"></script>
+</body>
+</html>
