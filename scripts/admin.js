@@ -90,7 +90,6 @@ $(document).ready(function() {
         // You can proceed with form submission if valid
         if (isValid) {
             // Submit the form or perform your desired action
-            alert("Form is valid! Proceed with submission.");
             // Here, you can actually submit the form if needed:
             // $('.services-form').submit();
         }
