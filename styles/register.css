@@ -22,7 +22,11 @@ h1{
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 /*Header*/
 header{
     background-color: rgb(152, 181, 207);

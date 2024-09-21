@@ -14,11 +14,57 @@ function validateForm() {
     const gender = document.querySelector('input[name="gender"]:checked');
 
     if (name === '' || age === '' || breed === '' || service === '' || type === '' || !gender) {
-        alert('All fields are required.');
         return false;
     }
     return true;
 }
+
+//Asterisks for form
+$(document).ready(function() {
+    $('#registerForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting immediately
+
+        // Remove previous asterisks
+        $('.required').each(function() {
+            $(this).find('.required-asterisk').remove();
+        });
+
+        let isValid = true;
+
+        if ($('#txtName').val().trim() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="txtName"]');
+        }
+
+        if ($('#txtAge').val().trim() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="txtAge"]');
+        }
+
+        if ($('#txtBreed').val().trim() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="txtBreed"]');
+        }
+
+        if ($('#txtService').val() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="txtService"]');
+        }
+
+        if ($('#txtType').val() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="txtType"]');
+        }
+
+        const genderSelected = $('input[name="gender"]:checked').length;
+        if (genderSelected === 0) {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('.form-radio legend');
+        }
+    });
+});
+
+
 function clearForm(){
     document.getElementById('txtName').value = "";
     document.getElementById('txtAge').value = "";
@@ -130,13 +176,12 @@ export function petsDisplay() {
 
 //Pre-loaded pets
 export function startingPets() {
-    const defaultPets = [
-        new Pet("Frank Lee", 1, "Male", "Bernedoodle", "Grooming", "Dog", "./img/Frank.jpg"),
-        new Pet("Luna Borfuna", 3, "Female", "Golden Mountain", "Nail Trim", "Dog", "./img/Luna.jpg"),
-        new Pet("Chloe Cat", 7, "Female", "Shorthair", "Bath", "Cat", "./img/Chloe.jpg"),
-        new Pet("Freyja the Butt", 3, "Female", "Shorthair", "Attitude Adjustment", "Cat", "./img/Freyja.jpg")
-    ];
-    pets.push(...defaultPets);
+    pets.push(new Pet("Frank Lee", 1, "Male", "Bernedoodle", "Grooming", "Dog", "./img/Frank.jpg"),
+    new Pet("Luna Borfuna", 3, "Female", "Golden Mountain", "Nail Trim", "Dog", "./img/Luna.jpg"),
+    new Pet("Chloe Cat", 7, "Female", "Shorthair", "Bath", "Cat", "./img/Chloe.jpg"),
+    new Pet("Freyja the Butt", 3, "Female", "Shorthair", "Attitude Adjustment", "Cat", "./img/Freyja.jpg")
+);
+    savePetsToLocalStorage(pets);
 }
 
 

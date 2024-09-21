@@ -65,6 +65,39 @@ function search() {
 document.getElementById("txtSearch").addEventListener("input", search);
 
 
+$(document).ready(function() {
+    $('#submitServicesBtn').click(function(event) {
+        event.preventDefault();
+        
+        // Remove previous asterisks
+        $('.required').each(function() {
+            $(this).find('.required-asterisk').remove();
+        });
+
+        // Check for empty required fields
+        let isValid = true;
+
+        if ($('#servicesName').val().trim() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="servicesName"]');
+        }
+
+        if ($('#servicesCost').val().trim() === '') {
+            isValid = false;
+            $('<span class="required-asterisk" style="color: red;"> *</span>').appendTo('label[for="servicesCost"]');
+        }
+
+        // You can proceed with form submission if valid
+        if (isValid) {
+            // Submit the form or perform your desired action
+            alert("Form is valid! Proceed with submission.");
+            // Here, you can actually submit the form if needed:
+            // $('.services-form').submit();
+        }
+    });
+});
+
+
 //onLoad
 function init() {
     displayRows();

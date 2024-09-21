@@ -34,6 +34,11 @@ h1{
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 /*Header*/
 header{
     background-color: rgb(152, 181, 207);
@@ -59,7 +64,7 @@ header{
 }
 /*Main*/
 .admin-container{
-    max-width: 80%;
+    width: 70%;
     margin: 0 auto;
     background-color: lightgray;
     min-height: 900px; /*change later*/
@@ -131,6 +136,8 @@ header{
 }
 .services-large-input{
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 .services-large-input textarea{
     width: 60%;
@@ -140,6 +147,13 @@ header{
 .small-inputs-space{
     display: flex;
     justify-content: space-between;
+}
+.card-flex{
+    flex: 0 0 auto;
+    display: flex;
+    max-height: calc(100vh - 100px);
+    width: 50%;
+    justify-content: space-around;
 }
 /*Footer*/
 .footer{
